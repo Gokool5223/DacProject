@@ -1,0 +1,15 @@
+<form #loginForm="ngForm"(ngSubmit)="login(loginForm)"role="form">
+<!-- on submit button whole form will be submitted on submit to service  -->
+
+<div class="form-group">
+  Email
+  <input type="email" ngModel name="email" id="email" required="required" placeholder="Input Email" >
+</div>
+<div class="form-group">
+    Password
+    <input type="password" ngModel name="password" id="password" required="required" placeholder="Input password" >
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+
+</form>
+<a routerLink="/register">Register here</a>

@@ -1,0 +1,142 @@
+For registration and login we require 
+1.Interface for User(Iuser)
+2.UserDaoImpl
+3.UserController
+4.pojo
+5.postman 
+if successful in postman then we can go in angular
+
+Home-DacProject-JavaPRoject and NgProject
+
+check bootstrap
+enrty in angular.json and package.json
+
+ng serve --open
+
+1.app
+bc3 -nav responsive
+
+links href
+
+ng g c register --- to create compnent
+
+app.module.ts import router module
+
+
+====================================================================================
+
+Project Steps(Configuration)
+
+1. Create DacProject-JavaWorkspace-
+2. select perspective java ee
+3. Set server add server- select tomcat8.5 directory
+4. create a new web dynamic project
+5. add source folder into javaresources -->resources
+6. in resources folder add three files 
+	1.database.properties
+	2.hibernate-persistence.xml
+	3.log4j.properties
+
+7.In WebContent folder add index.jsp
+8.In webInf folder add Spring-servlet.xml
+9.do changes in web.xml
+
+==========================================================================
+User Login and Registration
+
+==> Create Pojos <== 
+src-create class-(com.app.pojos)-
+1.User-
+
+@Entity -->
+
+2.Role-
+
+
+
+
+
+mhrto9009@gmail.com
+gokool@9009
+
+====================================================================================================
+
+Angular
+
+npm install bootstrap@4.4.1
+npm install bootstrap
+
+go to angular.json and in styles add path of bootstrap.min.css
+
+create login component
+-ng g c login
+login.html
+
+#loginForm="ngForm"
+The variable heroForm is now a reference to the NgForm directive that governs the form as a whole.
+
+
+The NgForm directive
+What NgForm directive? You didn't add an NgForm directive.
+
+Angular did. Angular automatically creates and attaches an NgForm directive to the <form> tag.
+
+The NgForm directive supplements the form element with additional features. It holds the controls you created for the elements with an ngModel directive and name attribute, and monitors their properties, including their validity. It also has its own valid property which is true only if every contained control is valid.
+
+
+===========================================================================
+go to app.module.ts
+import following
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { Router,RouterModule } from '@angular/router';
+
+
+Do following changes
+ imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+ 
+  RouterModule.forRoot([
+      {path:"login",component:LoginComponent}
+    ])
+
+add every component path as you create compnent
+
+add providers in app.module.ts
+providers: [HttpClientModule],
+-----------------------------------------------------------------
+
+in app.component.html add folln
+
+
+<router-outlet></router-outlet>
+---------------------------------------------------------
+
+
+in home.componenent.html added navbar
+
+added ngif and functions
+
+--------------------------------------
+go to login.component.ts
+
+
+-----------------------------------------------------
+create services 1.user 2. emtr
+
+ng g s user
+ng g s emtr
+
+
+
+
+
+
+
+
+
+
+
+
